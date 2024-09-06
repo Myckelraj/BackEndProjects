@@ -1,0 +1,86 @@
+/*
+ *  Licensed to the Apache Software Foundation (ASF) under one
+ *  or more contributor license agreements.  See the NOTICE file
+ *  distributed with this work for additional information
+ *  regarding copyright ownership.  The ASF licenses this file
+ *  to you under the Apache License, Version 2.0 (the
+ *  "License"); you may not use this file except in compliance
+ *  with the License.  You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing,
+ *  software distributed under the License is distributed on an
+ *  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ *  KIND, either express or implied.  See the License for the
+ *  specific language governing permissions and limitations
+ *  under the License.
+ */
+
+.navbar-brand img {
+    margin-top: -7px;
+    margin-left: 5px;
+}
+
+.x-key label.scalarName {
+    color: red;
+}
+
+tr.todo {
+}
+
+tr.done {
+    text-decoration: line-through;
+    color: #d3d3d3;
+}
+
+.custom-width-100 ul,
+.custom-width-100 ul li,
+.custom-width-100 ul li a.btn {
+    width: 100%;
+}
+
+.custom-padding-top-20 {
+    padding-top: 20px;
+}
+
+.ToDoAppDashboard .notYetComplete th.description {
+    width: 30%;
+}
+
+.ToDoAppDashboard .notYetComplete th.cost,
+.ToDoAppDashboard .notYetComplete td.cost {
+    display: none;
+}
+.ToDoAppDashboard .notYetComplete th.dueBy,
+.ToDoAppDashboard .notYetComplete td.dueBy {
+    display: none;
+}
+.ToDoAppDashboard .complete th.cost,
+.ToDoAppDashboard .complete td.cost {
+    display: none;
+}
+.ToDoAppDashboard .complete th.dueBy,
+.ToDoAppDashboard .complete td.dueBy {
+    display: none;
+}
+
+/*
+.todoapp-dom-todoitem-ToDoItem td.title-column {
+    background-color: aliceblue;
+}
+*/
+
+
+.standaloneCollectionPage .todoapp-dom-todoitem-ToDoItem .collectionContentsAsAjaxTablePanel table.contents thead th.title-column {
+    width: 20%;
+}
+
+.standaloneCollectionPage .todoapp-dom-todoitem-ToDoItem th.description,
+.standaloneCollectionPage .todoapp-dom-todoitem-ToDoItem td.description {
+    display: none;
+}
+.standaloneCollectionPage .todoapp-dom-todoitem-ToDoItem .collectionContentsAsAjaxTablePanel th.title-column,
+.standaloneCollectionPage .todoapp-dom-todoitem-ToDoItem .collectionContentsAsAjaxTablePanel  td.title-column {
+    text-align: left;
+}

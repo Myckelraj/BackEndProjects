@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bs3:grid xsi:schemaLocation="http://isis.apache.org/applib/layout/component http://isis.apache.org/applib/layout/component/component.xsd http://isis.apache.org/applib/layout/grid/bootstrap3 http://isis.apache.org/applib/layout/grid/bootstrap3/bootstrap3.xsd" xmlns:bs3="http://isis.apache.org/applib/layout/grid/bootstrap3" xmlns:c="http://isis.apache.org/applib/layout/component" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <bs3:row>
+        <bs3:col span="12" unreferencedActions="true">
+            <c:domainObject bookmarking="AS_ROOT">
+                <c:named>To-Do item</c:named>
+            </c:domainObject>
+        </bs3:col>
+    </bs3:row>
+    <bs3:row>
+        <bs3:col span="12">
+            <bs3:tabGroup>
+                <bs3:tab name="Properties">
+                    <bs3:row>
+                        <bs3:col span="6">
+                            <c:fieldSet name="General" id="general" unreferencedProperties="true">
+                                <c:action id="duplicate" position="PANEL_DROPDOWN"/>
+                                <c:action id="delete"/>
+                                <c:property id="description"/>
+                                <c:property id="category"/>
+                                <c:property id="subcategory">
+                                    <c:action id="updateCategory"/>
+                                    <c:action id="analyseCategory" position="RIGHT"/>
+                                </c:property>
+                                <c:property id="complete">
+                                    <c:action id="completed" cssClassFa="fa-thumbs-up"/>
+                                    <c:action id="notYetCompleted" cssClassFa="fa-thumbs-down"/>
+                                </c:property>
+                            </c:fieldSet>
+                        </bs3:col>
+                        <bs3:col span="6">
+                            <c:fieldSet name="Priority">
+                                <c:property id="relativePriority">
+                                    <c:action id="previous"/>
+                                    <c:action id="next"/>
+                                </c:property>
+                                <c:property id="dueBy"/>
+                            </c:fieldSet>
+                        </bs3:col>
+                    </bs3:row>
+                </bs3:tab>
+                <bs3:tab name="Other">
+                    <bs3:row>
+                        <bs3:col span="6">
+                            <c:fieldSet name="Cost etc.">
+                                <c:property id="cost">
+                                    <c:action id="updateCost"/>
+                                    <c:action id="totalCost"/>
+                                </c:property>
+                                <c:property id="location" hidden="ALL_TABLES"/>
+                            </c:fieldSet>
+                        </bs3:col>
+                        <bs3:col span="6">
+                            <c:fieldSet name="Documents">
+                                <c:property id="notes" hidden="ALL_TABLES" multiLine="10"/>
+                                <c:property id="attachment" hidden="ALL_TABLES"/>
+                                <c:property id="doc" hidden="ALL_TABLES"/>
+                            </c:fieldSet>
+                        </bs3:col>
+                    </bs3:row>
+                </bs3:tab>
+                <bs3:tab name="Metadata">
+                    <bs3:row>
+                        <bs3:col span="6">
+                            <c:fieldSet name="Metadata" id="metadata">
+                                <c:action id="recentActivity"/>
+                                <c:action id="recentAuditEntries"/>
+                                <c:action id="downloadLayoutXml" position="PANEL_DROPDOWN"/>
+                                <c:action id="invalidateMetamodel" position="PANEL_DROPDOWN"/>
+                                <c:action id="downloadJdoMetadata" position="PANEL_DROPDOWN"/>
+                                <c:property id="datanucleusIdLong"/>
+                                <c:property id="datanucleusVersionLong"/>
+                                <c:property id="datanucleusVersionTimestamp"/>
+                                <c:property id="atPath" hidden="ALL_TABLES"/>
+                            </c:fieldSet>
+                        </bs3:col>
+                        <bs3:col span="6">
+                            <c:action id="asV1_1"/>
+                            <c:action id="demoException"/>
+                            <c:action id="exportAsXml"/>
+                            <c:action id="openSourceCodeOnGithub" position="PANEL_DROPDOWN"/>
+                            <c:action id="completeSlowly"/>
+                        </bs3:col>
+                    </bs3:row>
+                </bs3:tab>
+            </bs3:tabGroup>
+        </bs3:col>
+    </bs3:row>
+    <bs3:row>
+        <bs3:col span="12">
+            <bs3:tabGroup unreferencedCollections="true">
+                <bs3:tab name="Similar to">
+                    <bs3:row>
+                        <bs3:col span="12">
+                            <c:collection defaultView="table" id="similarTo" paged="2"/>
+                        </bs3:col>
+                    </bs3:row>
+                </bs3:tab>
+                <bs3:tab name="Dependencies">
+                    <bs3:row>
+                        <bs3:col span="12">
+                            <c:collection defaultView="table" id="dependencies">
+                                <c:action id="add"/>
+                                <c:action id="remove"/>
+                            </c:collection>
+                        </bs3:col>
+                    </bs3:row>
+                </bs3:tab>
+            </bs3:tabGroup>
+        </bs3:col>
+    </bs3:row>
+</bs3:grid>
